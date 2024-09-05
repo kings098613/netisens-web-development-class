@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    margin: 0;
+}
+
+.container {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.display {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.display-box {
+    width: 50px;
+    height: 40px;
+    background-color: black;
+    color: #FFFFEF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.number-keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.button, .enter-button {
+    background-color:#D8046A;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.enter-button {
+    background-color: black;
+    grid-column: span 2;
+}
+
+.button:hover, .enter-button:hover {
+    opacity: 0.8;
+}
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="display">
+            <div class="computer">
+                <div class="display-box" id="computerNumber">?</div>
+                <p>Computer</p>
+            </div>
+            <div class="user">
+                <div class="display-box" id="userNumber">0</div>
+                <p>User</p>
+            </div>
+        </div>
+
+        <div class="number-keys">
+            <button class="button" onclick="NumberButton(0)">0</button>
+            <button class="button" onclick="NumberButton(1)">1</button>
+            <button class="button" onclick="NumberButton(2)">2</button>
+            <button class="button" onclick="NumberButton(3)">3</button>
+            <button class="button" onclick="NumberButton(4)">4</button>
+            <button class="button" onclick="NumberButton(5)">5</button>
+            <button class="button" onclick="NumberButton(6)">6</button>
+            <button class="button" onclick="NumberButton(7)">7</button>
+            <button class="button" onclick="NumberButton(8)">8</button>
+            <button class="button" onclick="NumberButton(9)">9</button>
+            <button class="enter-button" onclick="submitGuess()">Enter</button>
+        </div>
+    </div>
+
+    <script src="/assignment/guessingGame.js"></script>
+</body>
+</html>
